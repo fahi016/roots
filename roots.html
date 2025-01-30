@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots - App Development Studio</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Remove preloader - it's causing initial load delay -->
+    <!-- <div id="preloader">
+        <div class="loader"></div>
+    </div> -->
+</head>
+<body class="light-theme">
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-code"></i> Roots</h1>
+            <nav class="nav">
+                <a href="#about" data-tooltip="Our Story">About</a>
+                <a href="#portfolio" data-tooltip="Our Work">Portfolio</a>
+                <a href="#contact" data-tooltip="Start Your Project">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" data-tooltip="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1 class="fade-in">Transform Your App Idea Into Reality</h1>
+            <p class="hero-subtitle slide-up">Expert Mobile App Development Studio</p>
+            <div class="hero-buttons fade-in-delay">
+                <a href="#contact" class="btn primary">Start Your Project</a>
+                <a href="#portfolio" class="btn secondary">View Our Work</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat slide-up">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Apps Delivered</span>
+                </div>
+                <div class="stat slide-up">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat slide-up">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-aos="fade-up">Why Choose Roots?</h2>
+            <div class="about-content">
+                <div class="about-features" data-aos="fade-up">
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Rapid Development</h3>
+                        <p>Launch your app in weeks, not months. We use cutting-edge Flutter technology for fast, efficient development.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <h3>Clean Architecture</h3>
+                        <p>Scalable, maintainable code that grows with your business. Built with industry best practices.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Cross-Platform Excellence</h3>
+                        <p>One codebase, multiple platforms. Get your app on both iOS and Android with native performance.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure & Reliable</h3>
+                        <p>Enterprise-grade security with robust backend infrastructure using Firebase and AWS.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Dedicated Support</h3>
+                        <p>Direct communication with developers. No middlemen, just straightforward collaboration.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Future-Ready</h3>
+                        <p>Apps built with the latest technologies, ensuring long-term sustainability and easy updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">Recent Projects</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in">
+                    <img src="https://via.placeholder.com/300x200" alt="Fitness App">
+                    <h3>FitTrack Pro</h3>
+                    <p>Fitness tracking app with AI coach</p>
+                    <div class="portfolio-tags">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in">
+                    <img src="https://via.placeholder.com/300x200" alt="Food Delivery">
+                    <h3>QuickBite</h3>
+                    <p>Food delivery platform</p>
+                    <div class="portfolio-tags">
+                        <span>Flutter</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in">
+                    <img src="https://via.placeholder.com/300x200" alt="Social App">
+                    <h3>ConnectMe</h3>
+                    <p>Social networking platform</p>
+                    <div class="portfolio-tags">
+                        <span>Flutter</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Roots transformed our idea into a stunning app. Their expertise in Flutter development is exceptional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/50" alt="Client">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>FitTrack Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Fast development, great communication, and outstanding results. Highly recommend their services!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/50" alt="Client">
+                            <div class="author-info">
+                                <h4>Mike Chen</h4>
+                                <p>QuickBite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Start Your Project</h2>
+            <p class="section-subtitle">Tell us about your idea, and we'll help bring it to life</p>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Info - Clear visual hierarchy -->
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-items-stack">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <a href="mailto:hello@roots.dev">hello@roots.dev</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <a href="tel:+12345678900">+1 234 567 8900</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>123 Innovation Street</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple, focused contact form -->
+                <form class="contact-form" data-aos="fade-left" action="https://formspree.io/f/xldgndjw" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-code"></i> Roots</h3>
+                    <p>Turning Ideas into Amazing Apps</p>
+                </div>
+                <div class="footer-section">
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-indicator"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" async></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
