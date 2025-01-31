@@ -195,12 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Form interactions
+// Initialize EmailJS
+(function() {
+    emailjs.init("WGwDb98bOGLSWVwbm"); // Replace with your actual User ID
+})();
+
+// Form handling
 const contactForm = document.querySelector('.contact-form');
 const formInputs = contactForm.querySelectorAll('input, textarea');
 
 formInputs.forEach(input => {
-    // Add focus effects
     input.addEventListener('focus', () => {
         input.closest('.form-group').classList.add('focused');
     });
@@ -216,26 +220,20 @@ formInputs.forEach(input => {
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    
-    // Send form data
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
+    const templateParams = {
+        from_name: document.getElementById('name').value,
+        reply_to: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    emailjs.send('service_hmgjrd9', 'template_n92kj3h', templateParams)  // Replace with your actual Service ID and Template ID
+        .then(function(response) {
             alert('Message sent successfully!');
-            this.reset(); // Clear the form
-        } else {
-            alert('There was an error sending your message. Please try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message. Please try again.');
-    });
+            contactForm.reset();
+        }, function(error) {
+            alert('Failed to send message. Please try again.');
+            console.error('Error:', error);
+        });
 });
 
 // Portfolio item hover effects
